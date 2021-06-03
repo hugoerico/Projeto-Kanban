@@ -1,0 +1,69 @@
+<section>
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>To do</h2>
+
+      <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)"
+        (cdkDropListEntered)="chegou('todo')">
+        <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
+          (cdkDragStarted)="informacao(item)">
+          <div *ngIf="item.tipo===1">
+            <div>
+              {{item.nome}}- {{item.descricao}}
+            </div>
+            <div (click)="excluir(item.id);">excluir</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Doing</h2>
+
+      <div cdkDropList [cdkDropListData]="doing" class="example-list" (cdkDropListDropped)="drop($event)"
+        (cdkDropListEntered)="chegou('doing')">
+        <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
+          (cdkDragStarted)="informacao(item)">
+          <div *ngIf="item.tipo===2">
+            <div>
+              {{item.nome}}- {{item.descricao}}
+            </div>
+            <div (click)="excluir(item.id);">excluir</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Done</h2>
+
+      <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)"
+        (cdkDropListEntered)="chegou('done')">
+        <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
+          (cdkDragStarted)="informacao(item)">
+          <div *ngIf="item.tipo===3">
+            <div>
+              {{item.nome}}- {{item.descricao}}
+            </div>
+            <div (click)="excluir(item.id);">excluir</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section>
+  <button (click)="novo();">novo</button>
+  <br>
+  <br>
+  <div *ngIf="todo1">
+    <input type="text" placeholder="Nome" [(ngModel)]="todo1.nome">
+
+    <textarea type="text" cols="30" rows="10" placeholder="descrição" [(ngModel)]="todo1.descricao"></textarea>
+    <br>
+    <button (click)="cancelar();">Cancelar</button>
+
+    <button (click)="salvar();">Salvar</button>
+
+  </div>
