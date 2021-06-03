@@ -1,11 +1,12 @@
 .example-container {
     width: 400px;
     max-width: 100%;
-    margin: 0 25px 25px 0;
+    margin: 0 100px 25px 0;
     display: inline-block;
     vertical-align: top;
+    text-align: center;
   }
-  
+
   .example-list {
     border: solid 1px #ccc;
     min-height: 60px;
@@ -14,7 +15,7 @@
     overflow: hidden;
     display: block;
   }
-  
+
   .example-box {
     padding: 20px 10px;
     border-bottom: solid 1px #ccc;
@@ -28,7 +29,7 @@
     background: white;
     font-size: 14px;
   }
-  
+
   .cdk-drag-preview {
     box-sizing: border-box;
     border-radius: 4px;
@@ -36,20 +37,85 @@
                 0 8px 10px 1px rgba(0, 0, 0, 0.14),
                 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   }
-  
+
   .cdk-drag-placeholder {
     opacity: 0;
   }
-  
+
   .cdk-drag-animating {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
-  
+
   .example-box:last-child {
     border: none;
   }
-  
+
   .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
-  
+
+section{
+  background-color: gray;
+  min-height: calc(57vh - 66px);
+
+
+}
+.painel{
+  text-align: center;
+}
+.botaoNovo{
+  background-color:#4154E0;
+  width: 7rem;
+  margin: 0.5rem;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  transition: 1s all;
+  margin-bottom: 2rem;
+}
+.botaoNovo:hover {
+  background: #3342b3;
+  transform: scale(1.01);
+}
+
+.botaoCancelar{
+  background-color:rgba(34, 33, 33, 0.938);
+  width: 7rem;
+  margin: 0.5rem;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+.botaoSalvar{
+  background-color: #13b43b;
+  width: 7rem;
+  margin: 0.5rem;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+
+.caixaNome{
+  width: 14.5rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  border-style: none;
+
+}
+.caixaTexto{
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  border-style: none;
+
+}

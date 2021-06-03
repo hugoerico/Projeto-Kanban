@@ -1,4 +1,4 @@
-<section>
+<section class="painel">
   <div cdkDropListGroup>
     <div class="example-container">
       <h2>To do</h2>
@@ -53,17 +53,18 @@
 
   </div>
 </section>
-<section>
-  <button (click)="novo();">novo</button>
-  <br>
-  <br>
+<section class="caixaDescricao">
+  <button (click)="novo();" class="botaoNovo">novo</button>
   <div *ngIf="todo1">
-    <input type="text" placeholder="Nome" [(ngModel)]="todo1.nome">
+    <div >
+      <input class="caixaNome" type="text" placeholder="Nome da Tarefa" [(ngModel)]="todo1.nome">
+    </div>
+    <div >
+      <textarea class="caixaTexto" type="text" cols="31" rows="10" placeholder="Descrição"  [(ngModel)]="todo1.descricao"></textarea>
+    </div>
+    <button (click)="cancelar();" class="botaoCancelar">Cancelar</button>
 
-    <textarea type="text" cols="30" rows="10" placeholder="descrição" [(ngModel)]="todo1.descricao"></textarea>
-    <br>
-    <button (click)="cancelar();">Cancelar</button>
-
-    <button (click)="salvar();">Salvar</button>
+    <button (click)="salvar();" class="botaoSalvar">Salvar</button>
 
   </div>
+</section>
