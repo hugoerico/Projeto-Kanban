@@ -19,7 +19,9 @@ export class ProjetoKanbanComponent implements OnInit {
   todo2?: Kanban;
   done = [];
   doing = [];
+  cor = '';
 
+  // tslint:disable-next-line: typedef
   drop(event: CdkDragDrop<any>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);

@@ -1,70 +1,108 @@
-<section class="painel">
-  <div cdkDropListGroup>
-    <div class="example-container">
-      <h2>To do</h2>
+<body>
+  <section class="painel">
+    <div cdkDropListGroup>
+      <div class="meio">
+        <div class="example-container">
+          <h2>To do</h2>
 
-      <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)"
-        (cdkDropListEntered)="chegou('todo')">
-        <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
-          (cdkDragStarted)="informacao(item)">
-          <div *ngIf="item.tipo===1">
-            <div>
-              {{item.nome}}- {{item.descricao}}
+          <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)"
+            (cdkDropListEntered)="chegou('todo')">
+            <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
+              (cdkDragStarted)="informacao(item)">
+              <div *ngIf="item.tipo===1" class="cartao" >
+                <div>
+                  {{item.nome}}
+                </div>
+                <div>
+                  {{item.categoria}}
+                </div>
+                <div>
+                  {{item.descricao}}
+                </div>
+                <button class="excluir" (click)="excluir(item.id);">excluir</button>
+              </div>
             </div>
-            <div (click)="excluir(item.id);">excluir</div>
+          </div>
+        </div>
+
+        <div class="example-container">
+          <h2>Doing</h2>
+
+          <div cdkDropList [cdkDropListData]="doing" class="example-list" (cdkDropListDropped)="drop($event)"
+            (cdkDropListEntered)="chegou('doing')">
+            <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
+              (cdkDragStarted)="informacao(item)">
+              <div *ngIf="item.tipo===2" class="cartao">
+                <div>
+                  {{item.nome}}
+                </div>
+                <div>
+                  {{item.categoria}}
+                </div>
+                <div>
+                  {{item.descricao}}
+                </div>
+                <button class="excluir" (click)="excluir(item.id);">excluir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-container">
+          <h2>Done</h2>
+
+          <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)"
+            (cdkDropListEntered)="chegou('done')">
+            <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
+              (cdkDragStarted)="informacao(item)">
+              <div *ngIf="item.tipo===3" class="cartao">
+                <div>
+                  {{item.nome}}
+                </div>
+                <div>
+                  {{item.categoria}}
+                </div>
+                <div>
+                  {{item.descricao}}
+                </div>
+                <button class="excluir" (click)="excluir(item.id);">excluir</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
-
-    <div class="example-container">
-      <h2>Doing</h2>
-
-      <div cdkDropList [cdkDropListData]="doing" class="example-list" (cdkDropListDropped)="drop($event)"
-        (cdkDropListEntered)="chegou('doing')">
-        <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
-          (cdkDragStarted)="informacao(item)">
-          <div *ngIf="item.tipo===2">
-            <div>
-              {{item.nome}}- {{item.descricao}}
-            </div>
-            <div (click)="excluir(item.id);">excluir</div>
-          </div>
-        </div>
+  </section>
+  <section class="caixaDescricao">
+    <button (click)="novo();" class="botaoNovo">novo</button>
+    <div *ngIf="todo1">
+      <div>
+        <input class="caixaNome" type="text" placeholder="Nome da Tarefa" [(ngModel)]="todo1.nome">
       </div>
-    </div>
-
-    <div class="example-container">
-      <h2>Done</h2>
-
-      <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)"
-        (cdkDropListEntered)="chegou('done')">
-        <div class="example-box" *ngFor="let item of todo" (click)="editar(item)" cdkDrag
-          (cdkDragStarted)="informacao(item)">
-          <div *ngIf="item.tipo===3">
-            <div>
-              {{item.nome}}- {{item.descricao}}
-            </div>
-            <div (click)="excluir(item.id);">excluir</div>
-          </div>
-        </div>
+      <div>
+        <select  [(ngModel)]="todo1.categoria">
+          <option value="faculdade">Faculdade</option>
+          <option value="trabalho">Trabalho</option>
+          <option value="pessoal">Pessoal</option>
+          <option value="outros">outros</option>
+        </select>
       </div>
-    </div>
+      <div>
+        <select  [(ngModel)]="todo1.cor">
+          <option value="vermelho">Urgente</option>
+          <option value="amarelo">Atenção</option>
+          <option value="verde">Normal</option>
+        </select>
+      </div>
+      <div>
+        <textarea class="caixaTexto" type="text" cols="31" rows="10" placeholder="Descrição"
+          [(ngModel)]="todo1.descricao"></textarea>
+      </div>
+      <button (click)="cancelar();" class="botaoCancelar">Cancelar</button>
 
-  </div>
-</section>
-<section class="caixaDescricao">
-  <button (click)="novo();" class="botaoNovo">novo</button>
-  <div *ngIf="todo1">
-    <div >
-      <input class="caixaNome" type="text" placeholder="Nome da Tarefa" [(ngModel)]="todo1.nome">
-    </div>
-    <div >
-      <textarea class="caixaTexto" type="text" cols="31" rows="10" placeholder="Descrição"  [(ngModel)]="todo1.descricao"></textarea>
-    </div>
-    <button (click)="cancelar();" class="botaoCancelar">Cancelar</button>
+      <button (click)="salvar();" class="botaoSalvar">Salvar</button>
 
-    <button (click)="salvar();" class="botaoSalvar">Salvar</button>
-
-  </div>
-</section>
+    </div>
+  </section>
+</body>

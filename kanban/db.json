@@ -1,28 +1,44 @@
 {
   "todo": [
     {
-      "nome": "ddd",
-      "descricao": "dd",
+      "nome": "footer2",
+      "descricao": "arrumar o footer",
       "tipo": 1,
-      "id": 8
+      "id": 2,
+      "categoria": "faculdade",
+      "cor": "vermelho"
     },
     {
-      "nome": "444",
-      "descricao": "55",
+      "nome": "aplicação",
+      "descricao": "o bug do redirecionamento tem que arrumar",
       "tipo": 1,
-      "id": 10
+      "id": 3
     },
     {
-      "nome": "hhhhhhhh",
-      "descricao": "hhhhhhhhh",
-      "tipo": 1,
-      "id": 11
+      "nome": "menu",
+      "descricao": "fazer o menu",
+      "tipo": 2,
+      "id": 4
     },
     {
-      "nome": "arrumar o futer",
-      "descricao": "dsgfsfhgdghdfhgfjhgfjkgjkg",
+      "nome": "pagina sobre",
+      "descricao": "elaborar a pagina sobre nos",
       "tipo": 1,
-      "id": 12
+      "id": 5
+    },
+    {
+      "nome": "novo",
+      "descricao": "nova tarefa",
+      "tipo": 3,
+      "id": 6
+    },
+    {
+      "nome": "pi",
+      "categoria": "faculdade",
+      "descricao": "fazer o pi",
+      "cor": "vermelho",
+      "tipo": 1,
+      "id": 7
     }
   ]
 }
