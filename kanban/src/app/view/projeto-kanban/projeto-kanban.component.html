@@ -81,7 +81,8 @@
         <input class="caixaNome" type="text" placeholder="Nome da Tarefa" [(ngModel)]="todo1.nome">
       </div>
       <div>
-        <select  [(ngModel)]="todo1.categoria">
+        <select  [(ngModel)]="todo1.categoria" class="selectOpcoes">
+          <!--colocar uma o nome da categoria-->
           <option value="faculdade">Faculdade</option>
           <option value="trabalho">Trabalho</option>
           <option value="pessoal">Pessoal</option>
@@ -89,7 +90,7 @@
         </select>
       </div>
       <div>
-        <select  [(ngModel)]="todo1.cor">
+        <select  [(ngModel)]="todo1.cor" class="selectOpcoes">
           <option value="vermelho">Urgente</option>
           <option value="amarelo">Atenção</option>
           <option value="verde">Normal</option>

@@ -10,12 +10,19 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {HttpClientModule} from '@angular/common/http';
 
 import{ LayoutModule} from '@angular/cdk/layout';
-
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule} from '@angular/material/list';
+import { SobreComponent } from './views/sobre/sobre.component';
+import { MatCardModule} from '@angular/material/card'
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjetoKanbanComponent,
+    SobreComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,14 @@ import{ LayoutModule} from '@angular/cdk/layout';
     FormsModule,
     DragDropModule,
     HttpClientModule,
-    LayoutModule
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
