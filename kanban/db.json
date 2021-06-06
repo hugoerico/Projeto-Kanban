@@ -1,44 +1,12 @@
 {
   "todo": [
     {
-      "nome": "footer2",
-      "descricao": "arrumar o footer",
-      "tipo": 1,
-      "id": 2,
+      "nome": "Guardar roupas",
       "categoria": "faculdade",
-      "cor": "vermelho"
-    },
-    {
-      "nome": "aplicação",
-      "descricao": "o bug do redirecionamento tem que arrumar",
-      "tipo": 1,
-      "id": 3
-    },
-    {
-      "nome": "menu",
-      "descricao": "fazer o menu",
-      "tipo": 2,
-      "id": 4
-    },
-    {
-      "nome": "pagina sobre",
-      "descricao": "elaborar a pagina sobre nos",
-      "tipo": 1,
-      "id": 5
-    },
-    {
-      "nome": "novo",
-      "descricao": "nova tarefa",
-      "tipo": 3,
-      "id": 6
-    },
-    {
-      "nome": "pi",
-      "categoria": "faculdade",
-      "descricao": "fazer o pi",
+      "descricao": "Esta é a descrição do card, ela vai ficar maior pq queremos\ne talves faremos algo maior para puxar o card para baixo\n talves faremos algo maior para puxar o card para baixo",
       "cor": "vermelho",
       "tipo": 1,
-      "id": 7
+      "id": 1
     }
   ]
 }

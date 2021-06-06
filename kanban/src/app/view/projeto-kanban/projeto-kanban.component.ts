@@ -21,6 +21,9 @@ export class ProjetoKanbanComponent implements OnInit {
   doing = [];
   cor = '';
 
+// função drop para utilizar a lib, Cdk do material
+
+
   // tslint:disable-next-line: typedef
   drop(event: CdkDragDrop<any>) {
     if (event.previousContainer === event.container) {
@@ -42,6 +45,7 @@ export class ProjetoKanbanComponent implements OnInit {
     });
   }
 
+  // funções abaixo CRUD, das Tasks
 
   novo(): void {
     this.todo1 = new Kanban();
@@ -80,6 +84,7 @@ export class ProjetoKanbanComponent implements OnInit {
       this.listarTodo();
     });
   }
+  // esta função verifica onde esta a task, e troca a tabela da mesma no banco de dados
 
   chegou(tabela: string): void {
     if (tabela === 'todo') {
@@ -116,6 +121,8 @@ export class ProjetoKanbanComponent implements OnInit {
       this.cancelar();
     }
   }
+
+// pega os dados e armazena
 
   informacao(item: Kanban): void {
     this.todo2 = item;

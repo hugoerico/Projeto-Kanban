@@ -16,7 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule} from '@angular/material/list';
 import { SobreComponent } from './views/sobre/sobre.component';
-import { MatCardModule} from '@angular/material/card'
+import { MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,10 @@ import { MatCardModule} from '@angular/material/card'
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+
+
+
 
   ],
   providers: [],
