@@ -32,5 +32,6 @@ export class KanbanService {
   excluir(id?: number): Observable<any>{
     if (!id) { return EMPTY; }
     return this.http.delete<any>(environment.apiEndpoint + 'todo/' + id);
+
   }
 }

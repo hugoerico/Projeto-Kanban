@@ -10,4 +10,13 @@
     max-width: 80px;
     background-color: gray;
     color: honeydew;
+    margin: 33px;
+}
+
+.iconSave {
+    padding: 0px;
+    margin: 0px;
+    max-width: 5px;
+    min-width: 0px;
+    padding-right: 0px;
 }

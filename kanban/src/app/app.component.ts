@@ -6,10 +6,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'kanban';
-
-  usuario = "";
 
 
+apareceNatela="";
 
-}
+usuario = localStorage.getItem('nome');
+
+  constructor(){
+    this.getLocalstorage();
+  }
+
+
+  getLocalstorage(){
+
+    let usuario = localStorage.getItem("nome");
+
+
+  }
+
+  salvarLocalstorage() {
+
+
+    let usuario:string = this.apareceNatela;
+
+    localStorage.setItem ("nome", usuario);
+  }
+
+
+
+
+  }
+
+
+

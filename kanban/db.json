@@ -1,10 +1,10 @@
 {
   "todo": [
     {
-      "nome": "Guardar roupas",
-      "categoria": "faculdade",
-      "descricao": "Esta é a descrição do card, ela vai ficar maior pq queremos\ne talves faremos algo maior para puxar o card para baixo\n talves faremos algo maior para puxar o card para baixo",
-      "cor": "vermelho",
+      "nome": "Tarefa",
+      "categoria": "pessoal",
+      "descricao": "descrição da tarefa agora,\ntemos que fazer uma descrição maior para colocar no  ",
+      "cor": "amarelo",
       "tipo": 1,
       "id": 1
     }

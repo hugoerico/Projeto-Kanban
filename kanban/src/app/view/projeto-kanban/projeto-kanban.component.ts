@@ -82,6 +82,8 @@ export class ProjetoKanbanComponent implements OnInit {
     if (!id) { return; }
     this.kanbanService.excluir(id).subscribe(() => {
       this.listarTodo();
+
+    this.cancelar();
     });
   }
   // esta função verifica onde esta a task, e troca a tabela da mesma no banco de dados
