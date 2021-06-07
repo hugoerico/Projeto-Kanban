@@ -19,7 +19,6 @@ export class ProjetoKanbanComponent implements OnInit {
   todo2?: Kanban;
   done = [];
   doing = [];
-  cor = '';
 
 // função drop para utilizar a lib, Cdk do material
 
@@ -82,8 +81,7 @@ export class ProjetoKanbanComponent implements OnInit {
     if (!id) { return; }
     this.kanbanService.excluir(id).subscribe(() => {
       this.listarTodo();
-
-    this.cancelar();
+      this.cancelar();
     });
   }
   // esta função verifica onde esta a task, e troca a tabela da mesma no banco de dados

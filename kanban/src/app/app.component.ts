@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 
-apareceNatela="";
+apareceNatela = '';
 
 usuario = localStorage.getItem('nome');
 
@@ -17,19 +17,21 @@ usuario = localStorage.getItem('nome');
   }
 
 
+  // tslint:disable-next-line: typedef
   getLocalstorage(){
 
-    let usuario = localStorage.getItem("nome");
+    this.usuario = localStorage.getItem('nome');
 
 
   }
 
+  // tslint:disable-next-line: typedef
   salvarLocalstorage() {
 
+    const usuario: string = this.apareceNatela;
 
-    let usuario:string = this.apareceNatela;
-
-    localStorage.setItem ("nome", usuario);
+    localStorage.setItem ('nome', usuario);
+    this.usuario = localStorage.getItem('nome');
   }
 
 

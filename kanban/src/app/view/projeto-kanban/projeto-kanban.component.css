@@ -155,3 +155,16 @@ body {
     height: 30px;
     border-radius: 5px;
 }
+.vermelho{
+    background-color: red;  
+}
+.amarelo{
+    background-color: yellow; 
+}
+.verde{
+    background-color: green;
+}
+.textarea{
+    border-color: rgba(255, 255, 255, 0);
+}
+
