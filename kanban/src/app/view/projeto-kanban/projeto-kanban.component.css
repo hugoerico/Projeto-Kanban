@@ -68,13 +68,9 @@
     margin-bottom: 2rem;
 }
 
-.botaoNovo:hover {
-    background: #3342b3;
-    transform: scale(1.01);
-}
 
 .botaoCancelar {
-    background-color: rgba(34, 33, 33, 0.938);
+    background-color: rgb(252, 66, 66);
     width: 7rem;
     margin: 0.5rem;
     padding: 10px 0;
@@ -86,15 +82,15 @@
 }
 
 .botaoSalvar {
-    background-color: #13b43b;
-    width: 7rem;
-    margin: 0.5rem;
-    padding: 10px 0;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
+  background-color: rgb(66, 161, 66);
+  width: 7rem;
+  margin: 0.5rem;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
 }
 
 .caixaNome {
@@ -104,6 +100,9 @@
     margin-left: 0.5rem;
     border-radius: 5px;
     border-style: none;
+}
+.caixaNome::placeholder, .caixaTexto::placeholder{
+  color: black;
 }
 
 .caixaTexto {
@@ -118,6 +117,8 @@ body {
 
 .botaocard {
     align-items: flex-end;
+    color: white;
+
 }
 
 .cartao {
@@ -132,11 +133,13 @@ body {
     border-radius: 0px;
     margin-bottom: 0.05rem;
     font-size: large;
+    font-size: 18px;
+
 }
 
 .tag {
     opacity: 80%;
-    background-color: rgb(250, 205, 205);
+    background-color: rgb(213, 177, 247);
     margin-bottom: 0.05rem;
     font-size: small;
 }
@@ -156,15 +159,16 @@ body {
     border-radius: 5px;
 }
 .vermelho{
-    background-color: red;  
+  background-color: rgb(252, 66, 66);
 }
 .amarelo{
-    background-color: yellow; 
+  background-color: rgb(245, 205, 29);
 }
 .verde{
-    background-color: green;
+  background-color: rgb(66, 161, 66);
 }
 .textarea{
-    border-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
+
 

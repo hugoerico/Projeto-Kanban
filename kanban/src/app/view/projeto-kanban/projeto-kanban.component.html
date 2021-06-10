@@ -88,10 +88,10 @@
                                     </div>
                                 </div>
                                 <div class={{item.cor}}>
-                                    <button mat-button color="basic" class="botaocard" (click)="editar(item);">
+                                    <button mat-button color="" class="botaocard" (click)="editar(item);">
                                         <mat-icon>edit</mat-icon>
                                     </button>
-                                    <button mat-button color="basic" class="botaocard" (click)="excluir(item.id);">
+                                    <button mat-button color="" class="botaocard" (click)="excluir(item.id);">
                                         <mat-icon>delete</mat-icon>
                                     </button>
 
@@ -118,19 +118,19 @@
                 <!--Select para "selecionar uma categoria"-->
                 <select [(ngModel)]="todo1.categoria" class="selectOpcoes" required>
                     <option value="" disabled selected>Selecione uma categoria</option>
-                    <option value="faculdade">Faculdade</option>
-                    <option value="trabalho">Trabalho</option>
-                    <option value="pessoal">Pessoal</option>
-                    <option value="outros">Outros</option>
+                    <option value="Faculdade">Faculdade</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Pessoal">Pessoal</option>
+                    <option value="Outros">Outros</option>
                 </select>
             </div>
             <div>
                 <!--Select para "selecionar uma prioridade"-->
                 <select [(ngModel)]="todo1.cor" class="selectOpcoes" required>
-                    <option value="" disabled selected>Selecione uma propriedase</option>
+                    <option value="" disabled selected>Selecione uma propriedade</option>
                     <option value="vermelho">Urgente</option>
                     <option value="amarelo">Atenção</option>
-                    <option value="verde">Normal</option>
+                    <option value="verde">Moderado</option>
                 </select>
             </div>
             <div>
